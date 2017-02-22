@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		面向对象：
+			思想 -> 换了一种写法
+			
+			对象 - > 象
+					-> 抽象 （抽出像的部分-> 函数封装）
+						-> 抽
+							-> 抽离，抽出
+			
+			
+		面向过程 -> 之前写法都是面向过程
+		
+		人类:有思想的，会使用工具的，感情丰富，会跟我交流
+		
+		昆虫类:多个角，地上爬的，吃叶子，长翅膀的
+		
+		
+		人 + （带警帽，穿警服，配警徽，抓小偷的，捡钱上交的对象） = 警察
+		
+		警察：（带警帽，穿警服，配警徽，抓小偷的，捡钱上交的对象）类别
+			正义感，气场强大，无所畏惧，责任感，带警帽，穿警服，配警徽
+			抓小偷的，捡钱上交的对象，暴力
+			
+		医生：
+			
+		
+		警察() -> 人 + 警察的特征
+		
+		人 + 医生的特征 = 医生
+		
+		人:{
+			警察特征:(.......),
+			医生特征:(.......),
+			讲师特征:(......)
+		}
+		
+		人.警察特征() -> 警察
+		
+		面向对象:编程思想，把具有相同特征的地方归为一类，在类下面有不同特征的具体描述。
+		
+		
+		var time = new Date();
+		time.get
+		
+	*/
+	
+//	var name = 'nizp';
+//	var age = 18;
+//	
+//	var name2 = 'chenbin';
+//	var age2 = 80;
+//	
+//	var name3 = 'yaling';
+//	var age3 = 17;
+	
+//	function teacher(name,age){
+//		var name = name;
+//		var age = age;
+//		return {
+//			name:name,
+//			age:age
+//		}
+//	}
+//	
+//	var t1 = teacher('nizp',18);
+//	var t2 = teacher('chenbin',80);
+//	var t3 = teacher('yaling',17);
+//	
+//	alert(t1.name);
+
+
+	function Teacher(name,age){ //类
+		var name = name;
+		var age = age;
+		return {
+			name:name,
+			age:age
+		}
+	}
+	
+	//只是外形上像面向对象
+	var t1 = new Teacher('nizp',18);
+	var t2 = new Teacher('chenbin',80);
+	var t3 = new Teacher('yaling',17);
+	
+	alert(t1.name);
+	alert(t2.name);
+	alert(t3.name);
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

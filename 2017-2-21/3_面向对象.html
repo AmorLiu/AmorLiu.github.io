@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	/*
+		属性：名字前是有主的
+		变量:变量名前面没有主的
+		
+		非空对象上才能加属性或者方法。
+		
+		
+		函数:名前面没有主的
+		方法:名字前是有主的
+		
+	*/
+	
+//	var num = 0;
+//	var arr = [];
+//	arr.num = 0;
+//	num++;  //变量
+//	arr.num++;
+//	alert(arr.num); //属性
+
+//	var str = '';  因为str不是对象，所以为undefined.
+//	str.num = 0;
+//	str.num++;
+//	alert(str.num);
+	
+	
+	var arr = [1,2,3];
+	function fn(){ //函数
+		alert(this);
+	}
+	
+	arr.fn = function(){ //方法
+		alert(this);
+	}
+	
+	arr.fn();
+	fn();
+	
+	
+	
+	
+	/*
+		div.innerHTML 
+		div.id
+		...
+	*/
+	
+	
+//	alert(num);
+	
+	
+	
+</script>
+</body>
+</html>

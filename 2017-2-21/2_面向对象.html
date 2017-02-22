@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		
+		new RegExp();
+		new Array();
+		new String();
+	 
+	*/
+	
+	//粗略版的面向对象  ->  构造函数 -> 工厂方式  
+	function Teacher(name,age){
+		var obj = {}; //原材料
+		obj.name = name;
+		obj.age = age; //加工
+		obj.say = function(){
+			alert(this.name);
+		}
+		
+		return obj; //出厂
+	}
+	
+	var t1 = new Teacher('nizp',18);
+	//console.log(t1);
+	t1.say();
+	
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		有性能问题 
+		
+		原型：prototype 能够解决性能问题。(*函数*身上才有的)
+		
+		***函数.prototype 值为 对象 
+		
+		给构造函数加上了一个class
+		id
+		
+		***原型链:对象身上有原型链,但是没有原型。
+		***原型:函数身上既有原型也有原型链。
+		
+		原型链是什么：
+			实例化对象与构造函数下原型的桥梁。
+		
+		
+		1.如果从对象身上去查找某个方法，如果没有，还会继续查找
+		2.还会通过对象身上的原型链去查找
+		3.构造函数的原型
+		
+		
+			
+			
+			
+		
+	*/
+	function Teacher(name,age,job){
+		this.myName = name;
+		this.myAge = age;
+		this.myJob = job;
+//		this.say = function(){
+//			alert(this.myJob);
+//		}
+	}
+	
+	Teacher.prototype.say = function(){
+		alert(this.myJob);
+	};
+	
+	var t = new Teacher('nizp',38,'前端111111');
+	var t2 = new Teacher('chenbin',3,'前端222222');
+	
+//	t.say = function(){
+//		alert(11111);
+//	}
+
+	console.log(t);
+	
+//	console.log(t.__proto__ == Teacher.prototype);
+	
+	t.say();
+//	t2.say();
+
+//	console.log(t.say == t2.say);
+	
+	
+//	var obj1 = {};
+//	obj1.num = 10;
+//	var obj2 = {};
+//	obj2.num = 20;
+	
+//	console.log(obj1.num == obj2.num);
+
+	var arr = [1,2,3,4];
+//	var arr2 = [1,2,3,4];
+//	console.log(arr.push == arr2.push);
+
+//	Array.prototype.push = function(){
+//		alert('呵呵！早就把你改了');
+//	}
+//	
+//	arr.push(12344);
+	
+	
+	
+	
+</script>
+</body>
+</html>

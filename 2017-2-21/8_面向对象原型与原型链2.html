@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	//Teacher.say = function(){
+//		alert('我属于Teacher');
+//	}
+	/*
+		函数的原型，只给函数的实例化对象使用。 
+		
+		
+		1.从对象身上找
+			对象身上有没有  （有就找到了）没有继续找
+			对象身上的原型链找 -> 等同于找这个对象的构造函数的原型 （有就找到了）没有继续找
+			构造函数原型下的原型链 -> Object.原型（有就找到了，没有就结束）
+
+
+		2.从函数身上找
+			如果函数自身没有 （有就找到了）没有继续找
+			找函数的原型链（函数的原型，只给函数的实例化对象使用）
+			Function.prototype  （有就找到了）没有继续找
+			Object.原型（有就找到了，没有就结束）
+		
+	*/
+	Object.prototype.say = function(){
+		alert('我在这！');
+	}
+//	Function.prototype.say = function(){
+//		alert('我是fun');
+//	}
+	Teacher.prototype.say = function(){
+		alert('我属于Teacher');
+	}
+	function Teacher(name,age,job){
+		this.myName = name;
+		this.myAge = age;
+		this.myJob = job;
+	}
+//	Teacher.say = function(){
+//		alert('你你你')
+//	}
+	var t = new Teacher('nizp',38,'前端111111');
+	Teacher.say();
+	
+	console.dir(Teacher);
+	
+	//t.say();
+	//console.log(t);
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

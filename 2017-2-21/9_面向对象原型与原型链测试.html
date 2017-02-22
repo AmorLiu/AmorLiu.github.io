@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+//	Teacher.say = function(){
+//		alert('我属于Teacher2');
+//	}
+	Object.prototype.say = function(){
+		alert('我在这！');
+	}
+	Function.say = function(){
+		alert('fn自身的say');
+	}
+//	Function.prototype.say = function(){
+//		alert('我是fun');
+//	}
+//	Teacher.prototype.say = function(){
+//		alert('我属于Teacher');
+//	}
+	function Teacher(name,age,job){
+		this.myName = name;
+		this.myAge = age;
+		this.myJob = job;
+//		this.say = function(){
+//			alert('不用找了');
+//		}
+	}
+	var t = new Teacher('nizp',38,'前端111111');
+//	t.say();
+	Teacher.say();
+	
+	
+	//console.log(t);
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

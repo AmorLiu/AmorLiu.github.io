@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			#oUl li ul{
+				display: none;
+			}
+			#oUl li ul.show{
+				display: block;
+			}
+			#oUl li ul.hide{
+				display: none;
+			}
+			#oUl li h3 span{
+				padding: 0px 10px;
+			}
+			#oUl li h3.padL{
+				padding-left: 30px;
+			}
+			li{
+				list-style: none;
+			}
+		</style>
+
+	</head>
+
+<body>
+	<ul id="oUl"></ul>
+</body>
+<script>
+var arr = [
+{
+    title : "第一级菜单",
+    child : [
+    	{title:"第二集菜单1"},
+        {title:"第二集菜单1",
+        child:[
+        		{title:"第三集菜单1"},
+        		{title:"第三集菜单1",
+        		child:[
+        			{title:"第四集菜单1"},
+        			{title:"第四集菜单1"},
+        			{title:"第四集菜单1"}
+        		]
+        		},
+        		{title:"第三集菜单1"}
+        	]
+    	},
+        {
+        	title:"第二集菜单1",
+        	child:[
+        		{title:"第三集菜单1"},
+        		{title:"第三集菜单1"}
+        	]
+        }
+    ]
+},
+{
+    title : "第一级菜单2",
+    child : [
+    	{title:"第二集菜单2"},
+        {title:"第二集菜单2",
+        child:[
+        		{title:"第三集菜单2"},
+        		{title:"第三集菜单2",
+        		child:[
+        			{title:"第四集菜单2"},
+        			{title:"第四集菜单2"},
+        			{title:"第四集菜单2"}
+        		]
+        		},
+        		{title:"第三集菜单2"}
+        	]
+    	},
+        {
+        	title:"第二集菜单2",
+        	child:[
+        		{title:"第三集菜单2"},
+        		{title:"第三集菜单2"}
+        	]
+        }
+    ]
+},
+{
+	title:"第一集菜单",
+	child:[
+		{title:"第二集菜单"},
+		{title:"第二集菜单"}
+	]
+},
+];
+
+/*
+	创建版：
+	
+		思路：
+			首先循环整个数组
+			创建li -> h3 -> 如果有child数据的情况下才会有ul -> (li)
+			span
+			
+		
+*/
+console.log(arr);
+	
+	var box = document.getElementById('oUl');
+	function fn(arr){
+		var str = '';
+		arr.forEach(function(e,i){
+			str += '<li>';
+				if(e['child']){
+					str += '<h3>'+e['title']+'<span>+</span></h3>';
+					str += '<ul>';
+						str += fn(e['child']);
+					str += '</ul>';
+				}else{
+					str += '<h3>'+e['title']+'<span></span></h3>';
+				}
+			str += '</li>';
+		});
+		return str;
+	}
+	box.innerHTML = fn(arr);
+	
+	var li = document.getElementsByTagName('li');
+	
+	var arr = Array.from(li);//可以将类数组转数组。
+	
+	arr.forEach(function(e,i){
+		e.addEventListener('click',function(ev){
+			var ul = e.children[1];
+			if(ul){
+				if(ul.className !== 'show'){
+					ul.className = 'show';
+					ul.previousElementSibling.getElementsByTagName('span')[0].innerHTML = '-';
+				}else{
+					ul.className = 'hide';
+					ul.previousElementSibling.getElementsByTagName('span')[0].innerHTML = '+';
+				}
+			}
+			
+			var parent = e.parentNode;
+			var lis = parent.children;
+			
+			for(var i=0;i<lis.length;i++){
+				if(lis[i] != e){
+					var uls = lis[i].getElementsByTagName('ul');
+					for(var j=0;j<uls.length;j++){
+						uls[j].className = 'hide';
+						uls[j].previousElementSibling.getElementsByTagName('span')[0].innerHTML = '+';
+					}
+				}
+			}
+			
+			
+			
+			ev.cancelBubble = true;
+		});
+	});
+	
+	
+
+
+</script>
+</html>

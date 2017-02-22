@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			#oUl li ul{
+				display: none;
+			}
+			#oUl li ul.show{
+				display: block;
+			}
+			#oUl li ul.hide{
+				display: none;
+			}
+			#oUl li h3 span{
+				padding: 0px 10px;
+			}
+			#oUl li h3.padL{
+				padding-left: 30px;
+			}
+			li{
+				list-style: none;
+			}
+		</style>
+
+	</head>
+
+<body>
+	<ul id="oUl"></ul>
+</body>
+<script>
+var arr = [
+{
+    title : "第一级菜单",
+    child : [
+    	{title:"第二集菜单"},
+        {title:"第二集菜单",
+        child:[
+        		{title:"第三集菜单"},
+        		{title:"第三集菜单",
+        		child:[
+        			{title:"第四集菜单"},
+        			{title:"第四集菜单"},
+        			{title:"第四集菜单"}
+        		]
+        		},
+        		{title:"第三集菜单"}
+        	]
+    	},
+        {
+        	title:"第二集菜单",
+        	child:[
+        		{title:"第三集菜单"},
+        		{title:"第三集菜单"}
+        	]
+        }
+    ]
+},
+{
+    title : "第一级菜单",
+    child : [
+    	{title:"第二集菜单"},
+        {title:"第二集菜单",
+        child:[
+        		{title:"第三集菜单"},
+        		{title:"第三集菜单",
+        		child:[
+        			{title:"第四集菜单"},
+        			{title:"第四集菜单"},
+        			{title:"第四集菜单"}
+        		]
+        		},
+        		{title:"第三集菜单"}
+        	]
+    	},
+        {
+        	title:"第二集菜单",
+        	child:[
+        		{title:"第三集菜单"},
+        		{title:"第三集菜单"}
+        	]
+        }
+    ]
+},
+{
+	title:"第一集菜单",
+	child:[
+		{title:"第二集菜单"},
+		{title:"第二集菜单"}
+	]
+},
+];
+
+/*
+	创建版：
+	
+		思路：
+			首先循环整个数组
+			创建li -> h3 -> 如果有child数据的情况下才会有ul -> (li)
+			span
+			
+		
+*/
+console.log(arr);
+	
+	var box = document.getElementById('oUl');
+	
+	arr.forEach(function(e,i,all){
+//		console.log(i);
+		var li = document.createElement('li');
+		var h3 = document.createElement('h3');
+		var span = document.createElement('span');
+		
+		for(var attr in e){//{}
+			//console.log(attr, e[attr])
+			
+			//看看e这个对象里面有没有child，如果有span的内容就应该+
+			if(attr === 'child'){
+				span.innerHTML = '+';
+				//var ul = document.createElement('ul');
+				
+			}
+			//写h3的内容（菜单title）
+			h3.innerHTML = e['title'];
+			h3.appendChild(span);
+		}
+		
+		
+		li.appendChild(h3);
+//		console.log(li);
+		
+		box.appendChild(li);
+		
+	});
+	
+
+
+</script>
+</html>

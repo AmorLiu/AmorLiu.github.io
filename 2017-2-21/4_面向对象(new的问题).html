@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		
+		new 为运算符
+			专门用来运算函数的(相当于把一个函数调用了)
+			new 函数之后的返回值就变成了对象。
+		
+		
+		1.相当于在函数内部创建了一个对象，并且返回这个对象
+		
+		2.如果没有return默认返回这个对象，如果有return，后面跟着是个对象，那么函数名+() = return 后面的对象，如果不是对象，那么依然返回对象。
+		
+		3.里面的变量就要变成对象的属性，函数就要改成这个对象上的方法。
+	
+	 
+	*/
+	
+	//粗略版的面向对象  ->  构造函数 -> 工厂方式  
+	function Teacher(name,age){
+		//var obj = {}; //原材料
+		this.name = name;
+		this.age = age; //加工
+		this.say = function(){
+			alert(this.name);
+		}
+//		return {'job':'前端'};
+		return '123456';
+		//return obj; //出厂
+	}
+	
+	var t1 = new Teacher('nizp',18);//实例化对象（过程）
+	console.log(t1);
+	//t1.say();
+	
+	
+	
+	/*
+		new运算前和运算后 
+			函数名后的()是用来传参用的。
+			如果不传参()可以省略。
+	*/
+	
+//	function fn(){
+//		alert(123);
+//	}
+//	
+//	//new fn;
+//	
+//	console.log(new Date)
+	
+	
+	//console.log(t1);
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

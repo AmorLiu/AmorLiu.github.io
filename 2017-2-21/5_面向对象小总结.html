@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		类:
+			-> 函数 - 这个函数就返回一个对象 -> 构造函数
+		
+		new：
+			-> return后面写对象，返回值就是写的这个对象
+			   return后面跟的不是对象，返回值就是构造函数这个对象。
+			      尽量把变量变成属性，把函数变成方法。
+			      在不传参的情况下，可以不用加括号 new + 函数名即可调用这个函数。
+			      构造函数内的this指向了这个构造函数（就是这个对象）。
+		
+		没有new
+			-> return后面写什么，返回值就是什么。
+			   必须函数名 + 括号才能调用这个函数
+			   
+		行业的潜规则：
+			如果某个函数为构造函数，那么函数名的首字母要大写。
+		
+	*/
+	
+	function fn(name,age){ //fn{say:function(){alert(this)}}
+//		alert(1);
+		//return '123';
+		//return '123456'//{};
+		//console.log(this); //fn
+		this.name = name;
+		this.say = function(){
+			console.log(this.name);
+		}
+	}
+	var f = new fn('nizp',18);//实例化过程
+	
+	f.say();
+	console.log(f);
+	
+
+//	
+//	console.log(typeof f);
+
+//	var obj = {
+//		name:'chenbin',
+//		say:function(){
+//			console.log(this.name);
+//		}
+//	}
+//	obj.say();
+	
+	
+</script>
+</body>
+</html>

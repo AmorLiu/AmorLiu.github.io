@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	
+//	Object.prototype.say = function(){
+//		alert('我在这！');
+//	}
+	
+	Object.say = function(){
+		alert('我在这！');
+	};
+	
+	function Teacher(name,age,job){
+		this.myName = name;
+		this.myAge = age;
+		this.myJob = job;
+	}
+	
+	
+	/*
+		
+		实例化对象的链儿 ==  构造函数的原型
+		
+		
+		t.say  ->  t.__proto__  -> Teacher.prototype
+		
+		Teacher.prototype = {} -> Teacher.prototype.__proto__
+		
+		Object.prototype.say
+		
+		对象自身的优先级最高   > 这个对象的构造函数的原型 > Object.prototype
+		
+		
+		
+	*/
+//	Teacher.prototype.say = function(){
+//		alert(this.myJob);
+//	};
+	
+	var t = new Teacher('nizp',38,'前端111111');
+	
+//	t.say = function(){
+//		alert(1);
+//	}
+	
+	console.log(t);
+	//t.say();
+	
+	
+	
+	
+</script>
+</body>
+</html>

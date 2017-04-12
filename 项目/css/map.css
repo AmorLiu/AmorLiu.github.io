@@ -1,0 +1,134 @@
+body{
+	font-size: 14px;
+}
+@media (min-width: 768px){
+	.container {
+	    width: 750px;
+	}
+}
+@media (min-width: 992px){
+	.container {
+	    width: 970px;
+	}
+}
+@media (min-width: 1200px){
+	.container {
+	    width: 1170px;
+	}
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*.faq li:nth-child(1) {
+    margin: 0;
+}*/
+/*.faq li{
+	height: 2em;
+}*/
+.faq li .faq_a {
+    padding: 1em;
+    width: 100%;
+    display: block;
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: #000;
+    text-align: center;
+}
+.faq li .faq_a:hover{
+	color: #fff;
+	background:#002B38;
+}
+.faq .iframe {
+    width: 100%;
+    /*padding: 1em;*/
+    /*min-height: 25em;*/
+    border: none;
+    overflow: hidden;
+}
+.iframe #allmap{width:100%;height:350px;}
+@media (max-width: 991px){
+	.footer {
+	    padding: 2.5em 0;
+	}
+}
+@media (max-width: 1080px){
+	.footer {
+	    padding: 3.5em 0;
+	}
+}
+@media (max-width: 1366px){
+	.footer {
+	    padding: 4em 0;
+	}
+}
+.footer {
+    padding: 5em 0;
+    text-align: center;
+    background: #232323;
+}
+@media (max-width: 768px){
+	.footer h3 {
+	    font-size: 3em;
+	}
+}
+@media (max-width: 991px){
+	.footer h3 {
+	    font-size: 3.5em;
+	}
+}
+.footer h3 {
+    font-size: 4em;
+}
+.footer h3 a{
+    color:#fff;
+}
+@media (max-width: 800px){
+	.footer p {
+	    margin: 1em 0 1.5em;
+	}
+}
+.footer p {
+    color: #fff;
+    margin: 1em 0 2em;
+}
+.footer p a{
+    color: #E3535D;
+}
+.footer p a:hover{
+    color: #FFFF00;
+}
+.footer .container ul{
+	display: inline-block;
+}
+.footer .container ul li{
+	display: inline-block;
+	margin-right:.5em;
+}
+.footer .container ul li a {
+    background: url(../images/social-icons.png) no-repeat 0px 0px;
+    display: block;
+    height: 41px;
+    width: 41px;
+    background-color: #000;
+    -webkit-transition: .5s all;
+    transition: .5s all;
+    -moz-transition: .5s all;
+}
+.footer .container ul li:nth-of-type(2) a{
+	background-position: 0 -48px;
+}
+.footer .container ul li:nth-of-type(3) a{
+	background-position: 1px -96px;
+}
+.footer .container ul li:nth-of-type(4) a{
+	background-position: 0 -144px;
+}
+.footer .container ul li a:hover {
+    border-radius: 32px;
+    background-color: #E3535D;
+}

@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#mot {
+  background-image: url(../images/bg1.jpg);
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+#mot h1 {
+  margin: 5rem 0 3.75rem 0;
+  text-align: center;
+  color: #e2535d;
+}
+#mot #boxs {
+  width: 77.5rem;
+  margin: 0 auto;
+}
+#mot #boxs li {
+  list-style: none;
+  overflow: hidden;
+}
+#mot #boxs div {
+  margin: 0 auto;
+  height: 0;
+  width: 14.75rem;
+  box-sizing: content-box;
+  overflow: hidden;
+  transition-property: opacity;
+  transition-duration: .5s;
+  visibility: hidden;
+  position: relative;
+  opacity: 0.5;
+}
+#mot #boxs div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18.125rem;
+  width: 14.75rem;
+  transition: 1s;
+  z-index: 100;
+}
+#mot #boxs div span {
+  width: 100%;
+  height: 18.125rem;
+  float: left;
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+}
+#mot #boxs div span h3 {
+  font-size: 1.875rem;
+  margin: 0.625rem 0 1.875rem 0;
+}
+#mot #boxs div span p {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+#mot #boxs div span strong {
+  margin: 0 auto;
+  display: block;
+  width: 6.625rem;
+}
+#mot #boxs div span strong em {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+#mot #boxs div.active {
+  opacity: 1;
+  height: 18.125rem;
+  position: relative;
+  visibility: visible;
+  border: 0.625rem solid #3f3f3f;
+}
+#mot #boxs div.active span {
+  display: block;
+}
+#mot #boxs div.active:hover > img {
+  top: -18.75rem;
+}
+#mot #dot {
+  display: block;
+  width: 60px;
+  margin: 3.625rem auto 1.375rem auto;
+}
+#mot #dot ol {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+  border: 1px solid #3f3f3f;
+  display: inline-block;
+}
+#mot #dot ol.active {
+  background-color: #e2535d;
+}
+#photoWall {
+  width: 100%;
+  padding-bottom: 5.3125rem;
+}
+#photoWall h1 {
+  color: #e2535d;
+  margin: 5rem 0 3.125rem 0;
+}
+#photoWall ul {
+  margin: 0 auto 3.125rem auto;
+  width: 37.5rem;
+  list-style: none;
+  height: 1.375rem;
+  cursor: default;
+}
+#photoWall ul li {
+  height: 1.375rem;
+  float: left;
+  font-size: 0.9375rem;
+  margin-right: 2.75rem;
+}
+#photoWall ul li:last-of-type {
+  margin-right: 0;
+}
+#photoWall ul li.active {
+  color: #fc4f6b;
+  border-bottom: 2px solid #fc4f6b;
+}
+#photoWall > div {
+  /* display:none; */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+#photoWall > div.active {
+  /* display: block; */
+  visibility: visible;
+  height: auto;
+}
+#photoWall > div.active span {
+  transform: scale(1, 1);
+}
+#photoWall .line {
+  width: 69.5rem;
+  height: 18.75rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+#photoWall .line span {
+  transform: scale(0, 0);
+  transition: 0.5s;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+#photoWall .line span div.box {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 0.9375rem;
+  overflow: hidden;
+  position: relative;
+}
+#photoWall .line span div.box:hover > p {
+  top: 0;
+}
+#photoWall .line span div.box:hover > img {
+  transform: scale(2, 2);
+}
+#photoWall .line span div.box img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  transform-origin: center;
+}
+#photoWall .line span div.box p {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transition: 1s;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.58);
+  top: 18.75rem;
+  line-height: 18.75rem;
+  text-align: center;
+  color: #fff;
+}
+#describe {
+  padding: 0 17.1875rem;
+  width: 100%;
+  background-image: url(../images/bg2.jpg);
+  background-attachment: fixed;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#describe a {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 4.25rem auto 2.375rem auto;
+  border: 1px solid #fefefe;
+  color: #fefefe;
+  text-decoration: none;
+  font-size: 1.875rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+#describe h4 {
+  color: #fefefe;
+  letter-spacing: 1px;
+  color: #d1d1d1;
+}
+#describe span {
+  display: block;
+  border: 1px solid #939191;
+  width: 4rem;
+  margin: 1.875rem auto;
+}
+#describe p {
+  color: #fefefe;
+  padding-bottom: 4.375rem;
+}
+#menu {
+  width: 100%;
+  padding: 0 17.1875rem;
+  overflow: hidden;
+}
+#menu h1 {
+  margin-top: 6.25rem;
+  margin-bottom: 1.875rem;
+  color: #e3545e;
+}
+#menu p {
+  margin-bottom: 1.25rem;
+}
+#menu form input {
+  margin-top: 2.1875rem;
+  border: none;
+  border-bottom: 1px solid #999999;
+  padding: 0.625rem;
+  width: 100%;
+}
+#menu form input.half {
+  width: 20.375rem;
+}
+#menu form input.half.right {
+  float: right;
+}
+#menu form textarea {
+  border: none;
+  width: 100%;
+  height: 8.125rem;
+  padding: 0.625rem;
+  border-bottom: 1px solid #999999;
+  resize: none;
+}
+#menu form button {
+  display: block;
+  margin: 1.25rem auto 5.375rem auto;
+  width: 13.125rem;
+  height: 2.875rem;
+  background-color: #e3535d;
+  border: 4px solid #e3535d;
+  color: #fff;
+  transition: 1s;
+}
+#menu form button:hover {
+  background-color: #fff;
+  color: #e3535d;
+}

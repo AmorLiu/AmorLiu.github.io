@@ -1,0 +1,28 @@
+/*--------------reset--------------*/
+body,p,h1,h2,h3,h4,h5,h6,dl,dd{
+	margin:0;	
+}
+ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+	font-weight:normal;	
+}
+body a{
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+	text-decoration:none;
+	color:;
+}
+img{
+	vertical-align:top;
+	border:none;	
+}
+i,em{
+	font-style:normal;	
+}
